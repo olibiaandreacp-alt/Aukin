@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aukin — Monitoreo Web en Tiempo Real</title>
+  <meta name="description" content="Aukin analiza automáticamente las páginas web que tú elijas y detecta información importante antes que los demás." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-dot"></span>
+        Aukin
+      </a>
+      <nav class="nav-links">
+        <a href="#inicio" data-i18n="nav.home">Inicio</a>
+        <a href="#funciones" data-i18n="nav.features">Funciones</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="zh">中</button>
+          <button class="lang-btn" data-lang="ja">日</button>
+        </div>
+        <a href="#validacion" class="btn-primary btn-sm" data-i18n="hero.supportProject">Apoyar Proyecto</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#inicio" data-i18n="nav.home">Inicio</a>
+      <a href="#funciones" data-i18n="nav.features">Funciones</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <div class="mobile-lang">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中</button>
+        <button class="lang-btn" data-lang="ja">日</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow"></div>
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Live Monitoring</span>
+          </div>
+          <h1 data-i18n="hero.title">Monitorea internet en tiempo real con palabras clave</h1>
+          <p data-i18n="hero.description">Aukin analiza automáticamente las páginas web que tú elijas y detecta información importante antes que los demás.</p>
+          <div class="hero-actions">
+            <button class="btn-primary" id="heroSupportBtn" data-i18n="hero.supportProject">Apoyar Proyecto</button>
+            <a href="#como-funciona" class="btn-ghost" data-i18n="hero.howItWorks">Cómo Funciona</a>
+          </div>
+        </div>
+        <div class="hero-card reveal reveal-delay">
+          <div class="card-header">
+            <div class="card-header-left">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <span data-i18n="hero.summaryTitle">Resumen Informativo</span>
+            </div>
+            <span class="badge-new">2 <span data-i18n="hero.newItems">nuevos</span></span>
+          </div>
+          <div class="article-card">
+            <div class="article-meta">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span><span data-i18n="hero.ago">Hace</span> 5 <span data-i18n="hero.min">min</span></span>
+              <span class="dot-sep">·</span>
+              <span>tickets-event.com</span>
+            </div>
+            <p class="article-title" data-i18n="hero.article1Title">Preventa disponible para concierto de Bad Bunny en Ciudad de México</p>
+            <div class="article-tags">
+              <span class="tag">Preventa</span>
+              <span class="tag">Disponible</span>
+            </div>
+            <a href="#" class="article-link" data-i18n="hero.readArticle">Leer artículo →</a>
+          </div>
+          <div class="article-card">
+            <div class="article-meta">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span><span data-i18n="hero.ago">Hace</span> 23 <span data-i18n="hero.min">min</span></span>
+              <span class="dot-sep">·</span>
+              <span>educacion-noticias.com</span>
+            </div>
+            <p class="article-title" data-i18n="hero.article2Title">Abren convocatoria de becas universitarias 2026 para estudiantes internacionales</p>
+            <div class="article-tags">
+              <span class="tag">Becas</span>
+              <span class="tag">Convocatoria</span>
+            </div>
+            <a href="#" class="article-link" data-i18n="hero.readArticle">Leer artículo →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona" class="how-it-works">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="howItWorks.title">¿Cómo funciona?</h2>
+          <p data-i18n="howItWorks.description">Configura sitios web y recibe alertas automáticas.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-number">01</div>
+            <div class="step-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 data-i18n="howItWorks.step1Title">Agrega Sitios</h3>
+            <p data-i18n="howItWorks.step1Desc">Introduce páginas web que quieras monitorear.</p>
+          </div>
+          <div class="step-card reveal reveal-delay-1">
+            <div class="step-number">02</div>
+            <div class="step-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 data-i18n="howItWorks.step2Title">Configura Palabras</h3>
+            <p data-i18n="howItWorks.step2Desc">Elige palabras clave importantes.</p>
+          </div>
+          <div class="step-card reveal reveal-delay-2">
+            <div class="step-number">03</div>
+            <div class="step-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 data-i18n="howItWorks.step3Title">Monitoreo Inteligente</h3>
+            <p data-i18n="howItWorks.step3Desc">Aukin revisa los cambios automáticamente.</p>
+          </div>
+          <div class="step-card reveal reveal-delay-3">
+            <div class="step-number">04</div>
+            <div class="step-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3 data-i18n="howItWorks.step4Title">Recibe Alertas</h3>
+            <p data-i18n="howItWorks.step4Desc">Obtén notificaciones en tiempo real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS -->
+    <section id="funciones" class="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="features.title">Características</h2>
+          <p data-i18n="features.description">Diseñado para monitoreo e investigación inteligente.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon icon-amber">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 data-i18n="features.feature1Title">Economía</h3>
+            <p data-i18n="features.feature1Desc">Monitorea mercados y noticias financieras.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon icon-red">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3 data-i18n="features.feature2Title">Alertas</h3>
+            <p data-i18n="features.feature2Desc">Detecta información importante automáticamente.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon icon-blue">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 data-i18n="features.feature3Title">Tiempo Real</h3>
+            <p data-i18n="features.feature3Desc">Seguimiento rápido de múltiples páginas.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon icon-green">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+            </div>
+            <h3 data-i18n="features.feature4Title">Automatización</h3>
+            <p data-i18n="features.feature4Desc">Preparado para futuras funciones automáticas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUTURO -->
+    <section class="future">
+      <div class="container">
+        <div class="future-inner reveal">
+          <div class="future-text">
+            <span class="coming-soon-badge" data-i18n="future.badge">Próximamente</span>
+            <h2 data-i18n="future.title">Futuro del Proyecto</h2>
+            <p data-i18n="future.description">Se está pensando en desarrollar un bot de compra automática. Tú configurarías qué quieres, cuándo y cómo, y el sistema se encargaría del resto.</p>
+            <div class="future-steps">
+              <div class="future-step">
+                <div class="future-step-num">1</div>
+                <div>
+                  <strong data-i18n="future.step1Title">Configura tu compra</strong>
+                  <p data-i18n="future.step1Desc">Indica qué producto o servicio deseas, el precio máximo, y las condiciones.</p>
+                </div>
+              </div>
+              <div class="future-step">
+                <div class="future-step-num">2</div>
+                <div>
+                  <strong data-i18n="future.step2Title">El bot espera</strong>
+                  <p data-i18n="future.step2Desc">Monitorea constantemente hasta que se cumplan tus condiciones.</p>
+                </div>
+              </div>
+              <div class="future-step">
+                <div class="future-step-num">3</div>
+                <div>
+                  <strong data-i18n="future.step3Title">Compra automática</strong>
+                  <p data-i18n="future.step3Desc">Realiza la compra por ti en el momento exacto.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="future-example reveal reveal-delay">
+            <div class="example-card">
+              <div class="example-label" data-i18n="future.exampleTitle">Ejemplo: Boletos de concierto</div>
+              <blockquote data-i18n="future.exampleDesc">"Quiero 2 boletos para el concierto de Bad Bunny, zona VIP, máximo $5,000 cada uno. Comprar apenas estén disponibles."</blockquote>
+              <p class="example-note" data-i18n="future.exampleNote">El bot esperaría la preventa y compraría automáticamente cuando se cumplan las condiciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALIDACIÓN -->
+    <section id="validacion" class="validation">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="validation.title">Ayuda a validar Aukin</h2>
+          <p data-i18n="validation.description">Queremos saber cuántas personas realmente usarían esta herramienta.</p>
+        </div>
+        <div class="validation-card reveal">
+          <p class="counter-label" data-i18n="validation.interestedPeople">Personas interesadas</p>
+          <div class="counter-display" id="counterDisplay">1,284</div>
+          <p class="counter-sub" data-i18n="validation.waitlistText">Únete a la lista de espera y recibe acceso anticipado.</p>
+
+          <div id="formFeedback" class="form-feedback hidden"></div>
+
+          <div class="waitlist-form">
+            <input
+              type="email"
+              id="emailInput"
+              class="email-input"
+              data-i18n-placeholder="validation.emailPlaceholder"
+              placeholder="Tu correo electrónico"
+            />
+            <button class="btn-primary" id="submitBtn" data-i18n="validation.submitButton">
+              Quiero acceso anticipado
+            </button>
+          </div>
+
+          <button class="btn-support-only" id="supportOnlyBtn">
+            ✦ <span data-i18n="hero.supportProject">Apoyar Proyecto</span> (sin email)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="testimonials.title">Testimonios</h2>
+          <p data-i18n="testimonials.description">Opiniones de usuarios beta.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="testimonials.testimonial1">"Ahora puedo monitorear varias páginas desde un solo lugar."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">U</div>
+              <span data-i18n="testimonials.testimonial1Author">Usuario Beta</span>
+            </div>
+          </div>
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="testimonials.testimonial2">"Las palabras clave me ahorran muchísimo tiempo."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">E</div>
+              <span data-i18n="testimonials.testimonial2Author">Early Tester</span>
+            </div>
+          </div>
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="testimonials.testimonial3">"La idea tiene muchísimo potencial para monitoreo."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">F</div>
+              <span data-i18n="testimonials.testimonial3Author">Usuario Financiero</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 data-i18n="faq.title">Preguntas Frecuentes</h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q1">¿Puedo monitorear múltiples páginas web?</span>
+              <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq.a1">Sí, puedes agregar tantas páginas web como necesites y monitorearlas todas simultáneamente.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q2">¿Se pueden configurar varias palabras clave?</span>
+              <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq.a2">Absolutamente. Puedes configurar múltiples palabras clave para cada sitio web que monitorees.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q3">¿Habrá aplicación móvil?</span>
+              <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq.a3">Está en nuestros planes futuros desarrollar una aplicación móvil para iOS y Android.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q4">¿Funcionará para economía y tickets?</span>
+              <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq.a4">Sí, Aukin es versátil y puede usarse para monitorear noticias económicas, disponibilidad de tickets, y mucho más.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q5">¿Tendrá automatización futura?</span>
+              <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq.a5">Sí, estamos planeando agregar funciones de automatización como el bot de compra automática.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="cta-glow"></div>
+      <div class="container">
+        <div class="final-cta-inner reveal">
+          <h2 data-i18n="finalCta.title">Convierte internet en alertas inteligentes</h2>
+          <p data-i18n="finalCta.description">Monitorea información importante automáticamente con Aukin.</p>
+          <a href="#validacion" class="btn-primary btn-large" data-i18n="finalCta.button">Unirme a la Lista</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-dot"></span>
+        Aukin
+      </div>
+      <p class="footer-rights">© 2025 Aukin. <span data-i18n="footer.rights">Todos los derechos reservados</span>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
