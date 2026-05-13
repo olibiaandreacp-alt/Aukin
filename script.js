@@ -296,17 +296,13 @@ const translations = {
 // ── STATE ────────────────────────────────────────────────────
 const BASE_COUNT = 0;
 let currentLang = localStorage.getItem('aukin_lang') || 'es';
-299  // REINICIAR CONTADOR
-300  if (!localStorage.getItem('contador_iniciado')) {
-301      localStorage.removeItem('aukin_count');
-302      localStorage.setItem('contador_iniciado', 'true');
-303  }
-304
-305  // — COUNTER —
+
+// REINICIAR CONTADOR
 if (!localStorage.getItem('contador_iniciado')) {
-    localStorage.removeItem('aukin_count');
-    localStorage.setItem('contador_iniciado', 'true');
-}
+localStorage.removeItem('aukin_count');
+localStorage.setItem('contador_iniciado', 'true');
+  }
+
 // ── COUNTER ──────────────────────────────────────────────────
 function getCount() {
   return parseInt(localStorage.getItem('aukin_count') || String(BASE_COUNT), 10);
