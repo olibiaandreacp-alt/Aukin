@@ -294,7 +294,7 @@ const translations = {
 };
 
 // ── STATE ────────────────────────────────────────────────────
-const BASE_COUNT = 1284;
+const BASE_COUNT = 0;
 let currentLang = localStorage.getItem('aukin_lang') || 'es';
 
 // ── COUNTER ──────────────────────────────────────────────────
